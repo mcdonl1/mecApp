@@ -1,0 +1,24 @@
+body {
+    background: rgb(105, 89, 89);
+    font-family: helvetica;
+}
+
+h1 {
+    color: rgb(53, 53, 53);
+    font-size: 50px
+}
+
+a {
+    color: rgb(40, 216, 5);
+}
+
+p{
+    padding: 20px;
+    background: #666;
+}
+
+.sec {
+    background: rgb(12, 240, 221);
+    padding: 30px;
+    color: rgb(22, 24, 58);
+}
