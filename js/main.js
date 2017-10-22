@@ -38,10 +38,11 @@ $(document).ready(function(){
 
 });
 
-function getLoc(address) {
+function getLoc() {
+    var address = document.getElementById("userAddress");
     var geocoder = new google.maps.Geocoder();
-    geocoder.geocode( { 'address': address}, function(results, status) {} )
-    var latlng = results.geometry.location;
+    geocoder.geocode( { 'address': address}, function(results, status) {console.log("Hello");} )
+    var latlng = results[0].geometry.location;
     var lat = latlng.lat();
     var lng = latlng.lng();
     console.log(lat + " " + lng);
