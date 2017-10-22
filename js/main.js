@@ -7,9 +7,9 @@ $(window).load(function() {
 $(document).ready(function(){
 
 
-     
+
     //animated header class
-    $(window).scroll(function() {    
+    $(window).scroll(function() {
     var scroll = $(window).scrollTop();
      //console.log(scroll);
     if (scroll > 200) {
@@ -38,6 +38,11 @@ $(document).ready(function(){
 
 });
 
+function formChanged() {
+    var address = document.getElementsByName("address")[0].value;
+    document.getElementById("insert").innerHTML = address;
+}
+
 function getLoc(address) {
     var geocoder = new google.maps.Geocoder();
     geocoder.geocode( { 'address': address}, function(results, status) {} )
@@ -47,8 +52,3 @@ function getLoc(address) {
     console.log(lat + " " + lng);
     return lat, lng;
 }
-
-
-
-
-
