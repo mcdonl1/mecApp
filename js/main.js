@@ -1,3 +1,5 @@
+
+
 $(window).load(function() {
     $("#preloader-wrapper").fadeOut("slow");
 });
@@ -36,7 +38,15 @@ $(document).ready(function(){
 
 });
 
-
+function getLoc(address) {
+    var geocoder = new google.maps.Geocoder();
+    geocoder.geocode( { 'address': address}, function(results, status) {} )
+    var latlng = results.geometry.location;
+    var lat = latlng.lat();
+    var lng = latlng.lng();
+    console.log(lat + " " + lng);
+    return lat, lng;
+}
 
 
 

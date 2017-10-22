@@ -77,16 +77,11 @@
                         </div>
                     </div>
                 </div><!-- .row close -->
-                <form class="input-group" id="frm1">
-                    <input class="form-control" type="text" name="userAdress" placeholder="Enter your Address"><br><br>
-                    <input class="input-group-btn" type="submit" value="Submit">
+                <form class="input-group" id="userAddress">
+                    <br><br><input class="form-control" type="text" id="userAdress" placeholder="Enter your Address"><br><br>
+                    <button class="form-control" onclick="getLoc(document.getElementById("userAddress"))">Get Report</button>
                   </form> <!-- get address from user -->
-                <script>
-                    function getLatLong(adr) {
-                        //function to get lat and long
-                        
-                    }
-                </script>
+
                 <!-- <div class="input-group">
                     <input type="text" class="form-control" placeholder="Enter Your Address">
                     <span class="input-group-btn">
@@ -125,7 +120,7 @@
         <script src="js/jquery.magnific-popup.min.js"></script>
         <script src="js/main.js"></script>
         <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpmGS7EPr3w1CpF2x6vq7LggZblKHojV8&callback=initMap">
         </script>
     </body>
 </html>
