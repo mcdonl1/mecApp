@@ -38,19 +38,17 @@ $(document).ready(function(){
 
 });
 
-function getLoc() {
-    var address = document.getElementById("userAddress");
-function formChanged() {
-    var address = document.getElementsByName("address")[0].value;
-    document.getElementById("insert").innerHTML = address;
-}
+
+
 
 function getLoc(address) {
     var geocoder = new google.maps.Geocoder();
-    geocoder.geocode( { 'address': address}, function(results, status) {console.log("Hello");} )
-    var latlng = results[0].geometry.location;
-    var lat = latlng.lat();
-    var lng = latlng.lng();
-    console.log(lat + " " + lng);
+    geocoder.geocode( { 'address': address}, function(results, status) {
+        var latlng = results[0].location;
+        var lat = latlng.lat();
+        var lng = latlng.lng();
+        console.log(lat + " " + lng);
+    } )
+
     return lat, lng;
 }
